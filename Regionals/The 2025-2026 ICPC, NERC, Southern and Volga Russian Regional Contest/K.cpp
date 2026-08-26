@@ -188,7 +188,8 @@ void solve(){
         // neu x = 1: term = 1 neu pre[r] != pre[l-1]
     // -> x = 1 thi tao canh giua node r va node l-1
     // can chia n+1 dinh (0 -> n) thanh 2 tap 0 va 1 sao cho so canh tu tap 0 -> tap 1 la nho nhat
-    // pre[0] = 0 -> phu thuoc vao viec pre[0] nam o tap nao de ta xac dinh duoc gia tri
+    // -> tim lat cat cuc tieu cua do thi tai bit j
+    // truy vet: pre[0] = 0 -> phu thuoc vao viec pre[0] nam o tap nao de ta xac dinh duoc gia tri
 
     for(int j=29; j>=0; --j){
         StoerWagner sw(n);
@@ -203,15 +204,13 @@ void solve(){
         for (int u : (rootInS ? cutT : cutS)) {
             bitVal[u] = 1;
         }
-        
+
         for(int i=1; i<=n; ++i){
             Ans[i] |= ((bitVal[i] ^ bitVal[i-1])<<j);
         }
     }
 
-    // cout << n << ' ' << k << ' ' << m; el;
     for(int i=1; i<=n; ++i) cout << Ans[i] << ' ';
-    // for(int i=1; i<=m; ++i) cout << p[i].l << ' ' << p[i].r << ' ' << p[i].x << '\n';
 }
 
 int main(){
