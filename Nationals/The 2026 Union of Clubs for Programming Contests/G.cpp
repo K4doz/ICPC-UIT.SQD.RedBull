@@ -113,10 +113,13 @@ long double Cal1Vec(Vector V, Vector X){
 }
 
 long double Cal2Vec(Vector V1, Vector V2, Vector X){
-    ll Cr = cross(V1, V2);
-    if(Cr == 0) return -1;
-    long double t1 = (long double)cross(X, V2) / Cr;
-    long double t2 = (long double)cross(V1, X) / Cr;
+    // (t1, t2) * [V1, V2]^T = X
+    // <-> (t1, t2) = X * ([V1, V2]^T)^(-1)
+    // -> ma tran kha nghich khi dinh thuc khac 0
+    ll Det = cross(V1, V2);
+    if(Det == 0) return -1;
+    long double t1 = (long double)cross(X, V2) / Det;
+    long double t2 = (long double)cross(V1, X) / Det;
     if(t1 < 0 || t2 < 0) return -1;
     return t1 + t2;
 }
