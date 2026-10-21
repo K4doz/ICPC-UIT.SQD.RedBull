@@ -2,7 +2,8 @@
 
 ###### :paperclip: Tags: Xor basis, Linear algebra
 
-__Team mình xin phép clone lại [Bài viết gốc](https://hackmd.io/@minhnguyent546/BJKcH_2ti/) sau ở repo này để tiện cho việc training. Rất cảm ơn tác giả đã tạo ra một bài viết chất lượng để tham khảo!__
+__Team mình xin phép clone lại [bài viết gốc](https://hackmd.io/@minhnguyent546/BJKcH_2ti/) ở repo này để tiện cho việc training. Rất cảm ơn tác giả đã tạo ra một bài viết chất lượng để tham khảo!__
+
 __Người viết:__ 
 - Nguyễn Minh Thiện - Trường CNTT & TT, Đại học Cần Thơ.
 
